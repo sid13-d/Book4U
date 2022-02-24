@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OTPActivity"
+    android:background="@drawable/login_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/login_container"
+        android:elevation="5dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/otpGif"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/otp_gif" />
+
+        <TextView
+            android:id="@+id/otpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the OTP"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otpGif"/>
+
+        <TextView
+            android:id="@+id/otpStatement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please enter the verification code sent on XX66"
+            android:layout_marginTop="10dp"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otpText" />
+
+        <LinearLayout
+            android:id="@+id/otpFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/otpStatement"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/digit1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:background="@drawable/otp_bg"
+                android:maxLength="1"
+                android:layout_marginRight="8dp"/>
+
+            <EditText
+                android:id="@+id/digit2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:background="@drawable/otp_bg"
+                android:maxLength="1"
+                android:layout_marginRight="8dp"/>
+
+            <EditText
+                android:id="@+id/digit3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:background="@drawable/otp_bg"
+                android:maxLength="1"
+                android:layout_marginRight="8dp"/>
+
+            <EditText
+                android:id="@+id/digit4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:background="@drawable/otp_bg"
+                android:maxLength="1"
+                android:layout_marginRight="8dp"/>
+
+            <EditText
+                android:id="@+id/digit5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:background="@drawable/otp_bg"
+                android:maxLength="1"
+                android:layout_marginRight="8dp"/>
+
+            <EditText
+                android:id="@+id/digit6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:background="@drawable/otp_bg"
+                android:maxLength="1"
+                android:layout_marginRight="8dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/verifyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_lavender"
+            android:elevation="20dp"
+            android:text="VERIFY"
+            android:onClick="loginMethod"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otpFields"
+            app:layout_constraintVertical_bias="0.355"
+            app:layout_constraintWidth_percent=".5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

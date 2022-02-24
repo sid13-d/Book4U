@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animView"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/onboarding1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/onboardingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/nunito_variablefont_wght"
+        android:text="Title Text will be short"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_below="@+id/animView"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/titleDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This text is going to be replaced by the text which is present in the array."
+        android:layout_below="@+id/onboardingTitle"
+        android:layout_marginTop="20dp"
+        android:padding="30dp"
+        android:textAlignment="center"
+        />
+
+</RelativeLayout>

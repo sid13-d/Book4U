@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Book4U</string>
+    <string name="login">LOGIN</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="signup">SIGNUP</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login1">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="upload_a_pdf">upload a pdf</string>
+</resources>
